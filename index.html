@@ -1,1 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter Hephzibah — Brand Designer</title>
+  <meta name="description" content="Portfolio of Peter Hephzibah. Minimalist brand designer with 7 years of experience crafting visual systems and timeless brand identities.">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50' y='64' fill='%23FFF' font-family='sans-serif' font-weight='700' font-size='44' text-anchor='middle'>PH</text></svg>">
+
+  <!-- Google Font: Space Grotesk exclusively -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          letterSpacing: {
+            'tightest': '-1px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#000000] text-[#FFFFFF] font-sans antialiased selection:bg-white selection:text-black">
+
+  <!-- Subtle custom cursor dot -->
+  <div class="custom-cursor"></div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR (GLASS ACCENT)
+       ========================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 px-6 py-4 md:px-12 glass-top-panel">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      
+      <!-- Monogram & Name only (removed '7 years exp active studio') -->
+      <a href="#" class="flex items-center gap-3">
+        <span class="font-bold text-sm tracking-neg-1 text-white uppercase">Peter Hephzibah</span>
+      </a>
+
+      <!-- Minimal Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider text-zinc-400">
+        <a href="#work" class="hover:text-white transition-colors">Work</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Glass button for direct action -->
+      <a href="#contact" class="glass-btn text-xs py-1.5 px-4">
+        Contact
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION — CENTERED, REDUCED NAME SIZE, TEXT PULL-UP ANIMATION
+       (Removed top badges and contact links below header)
+       ========================================================================== -->
+  <main>
+    <section class="min-h-[85vh] pt-36 pb-20 px-6 flex flex-col items-center justify-center text-center relative hero-pull-up-group max-w-4xl mx-auto">
+      
+      <!-- Headline & Name (Reduced by 40%, Space Grotesk, character spacing -1) -->
+      <div class="pull-up-mask">
+        <h1 class="pull-up-text font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-neg-1">
+          PETER HEPHZIBAH
+        </h1>
+      </div>
+
+      <div class="pull-up-mask mt-2">
+        <h2 class="pull-up-text delay-150 font-normal text-xl sm:text-2xl md:text-3xl text-zinc-400 tracking-neg-1">
+          Brand Designer & Identity Systems
+        </h2>
+      </div>
+
+      <!-- Concise narrative statement -->
+      <div class="pull-up-mask mt-6 max-w-xl mx-auto">
+        <p class="pull-up-text delay-250 text-zinc-400 text-sm sm:text-base font-light leading-relaxed">
+          Crafting timeless visual systems, custom typography, and strategic brand identities for ambitious companies worldwide. 7 years of professional experience.
+        </p>
+      </div>
+
+      <!-- Action Buttons (Glass accents) -->
+      <div class="pull-up-mask mt-8">
+        <div class="pull-up-text delay-300 flex items-center justify-center gap-4">
+          <a href="#work" class="glass-btn glass-btn-solid text-xs py-2.5 px-6">
+            View Work ↓
+          </a>
+          <a href="#contact" class="glass-btn text-xs py-2.5 px-6">
+            Get in Touch →
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         SELECTED WORKS (CLEAN MINIMALIST CARDS)
+         ========================================================================== -->
+    <section id="work" class="py-24 px-6 md:px-12 max-w-6xl mx-auto border-t border-zinc-900 scroll-pull-up">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-4 border-b border-zinc-900">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-1">01 / Index</span>
+          <h2 class="font-bold text-3xl md:text-4xl text-white tracking-neg-1">
+            Selected Works
+          </h2>
+        </div>
+        <p class="text-xs text-zinc-400 max-w-xs mt-2 md:mt-0 font-light">
+          Identities, typographic architectures, and brand systems across 7 years of practice.
+        </p>
+      </div>
+
+      <!-- Minimalist Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Project 1: AETHER AUTOMOTIVE -->
+        <article class="minimal-card p-6 cursor-pointer group" data-project-id="aether">
+          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
+            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="38" stroke="white" stroke-width="1.5"/>
+              <circle cx="50" cy="50" r="24" stroke="#666" stroke-width="1"/>
+              <line x1="50" y1="20" x2="50" y2="80" stroke="white" stroke-width="1.5"/>
+              <line x1="20" y1="50" x2="80" y2="50" stroke="white" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">EV Mobility · 2026</span>
+              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Aether Automotive</h3>
+            </div>
+            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+          </div>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Autonomous mobility brand architecture, variable typography, and vehicle interface visual identity.
+          </p>
+        </article>
+
+        <!-- Project 2: VALENCE SYNTHETICS -->
+        <article class="minimal-card p-6 cursor-pointer group" data-project-id="valence">
+          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
+            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
+              <polygon points="50,15 85,35 85,75 50,95 15,75 15,35" stroke="white" stroke-width="1.5"/>
+              <polygon points="50,30 72,43 72,67 50,80 28,67 28,43" stroke="#666" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Bio-Computing · 2025</span>
+              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Valence Synthetics</h3>
+            </div>
+            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+          </div>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Computational biology identity system, scientific publication design, and visual brand language.
+          </p>
+        </article>
+
+        <!-- Project 3: KROMA PARFUM -->
+        <article class="minimal-card p-6 cursor-pointer group" data-project-id="kroma">
+          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
+            <svg class="w-20 h-28 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 130" fill="none">
+              <rect x="25" y="40" width="50" height="75" rx="4" stroke="white" stroke-width="1.5"/>
+              <rect x="42" y="24" width="16" height="16" stroke="#666" stroke-width="1.5"/>
+              <line x1="35" y1="75" x2="65" y2="75" stroke="white" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Luxury Packaging · 2024</span>
+              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Kroma Parfumerie</h3>
+            </div>
+            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+          </div>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Minimalist perfume packaging, bespoke Roman typography, and structural bottle unboxing system.
+          </p>
+        </article>
+
+        <!-- Project 4: NEXUS PROTOCOL -->
+        <article class="minimal-card p-6 cursor-pointer group" data-project-id="nexus">
+          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
+            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
+              <path d="M20 50L50 20L80 50L50 80Z" stroke="white" stroke-width="1.5"/>
+              <path d="M35 50L50 35L65 50L50 65Z" stroke="#666" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Fintech Protocol · 2024</span>
+              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Nexus Protocol</h3>
+            </div>
+            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+          </div>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Zero-knowledge cryptographic infrastructure branding, structural grid system, and technical portal.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT & 7 YEARS EXPERIENCE (MINIMALIST)
+         ========================================================================== -->
+    <section id="about" class="py-24 px-6 md:px-12 max-w-6xl mx-auto border-t border-zinc-900 scroll-pull-up">
+      
+      <div class="mb-12 pb-4 border-b border-zinc-900">
+        <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-1">02 / About</span>
+        <h2 class="font-bold text-3xl md:text-4xl text-white tracking-neg-1">
+          7 Years of Brand Practice
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div>
+          <span class="text-xs font-mono text-zinc-500">2019 — 2021</span>
+          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Foundational Systems</h3>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Swiss grid disciplines, corporate identity architecture, and custom letterform development for early-stage ventures.
+          </p>
+        </div>
+
+        <div>
+          <span class="text-xs font-mono text-zinc-500">2021 — 2024</span>
+          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Scale & Luxury</h3>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Expanding into luxury packaging, international tech identity systems, and institutional brand strategy.
+          </p>
+        </div>
+
+        <div>
+          <span class="text-xs font-mono text-zinc-500">2024 — Present</span>
+          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Comprehensive Direction</h3>
+          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+            Directing end-to-end brand worlds, variable typography systems, and tactile physical collateral.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Core Disciplines List -->
+      <div class="mt-16 pt-8 border-t border-zinc-900 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs">
+        <div>
+          <span class="text-zinc-600 block mb-1">01</span>
+          <span class="text-white font-medium block">Brand Architecture</span>
+        </div>
+        <div>
+          <span class="text-zinc-600 block mb-1">02</span>
+          <span class="text-white font-medium block">Custom Typography</span>
+        </div>
+        <div>
+          <span class="text-zinc-600 block mb-1">03</span>
+          <span class="text-white font-medium block">Visual Identity Systems</span>
+        </div>
+        <div>
+          <span class="text-zinc-600 block mb-1">04</span>
+          <span class="text-white font-medium block">Luxury Packaging</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION — MINIMALIST WITH CONTACT DUDS
+         (LinkedIn, Behance, X, WhatsApp)
+         ========================================================================== -->
+    <section id="contact" class="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center border-t border-zinc-900 scroll-pull-up">
+      
+      <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-2">03 / Contact</span>
+      <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-neg-1">
+        Let's work together.
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-3 max-w-md mx-auto font-light">
+        Available for select brand identity commissions, typography projects, and design advisory worldwide.
+      </p>
+
+      <!-- ======================================================================
+           CONTACT DUDS BUTTONS (GLASS ACCENT BUTTONS)
+           ====================================================================== -->
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+
+        <!-- CONTACT DUD: LINKEDIN -->
+        <a href="#" 
+           data-dud="true" 
+           data-platform="LinkedIn"
+           data-sample="https://linkedin.com/in/peterhephzibah"
+           class="glass-btn text-xs py-2 px-4"
+           title="Contact Dud: Replace with your LinkedIn URL">
+          <span>LinkedIn</span>
+          <span class="dud-tag">Dud</span>
+        </a>
+
+        <!-- CONTACT DUD: BEHANCE -->
+        <a href="#" 
+           data-dud="true" 
+           data-platform="Behance"
+           data-sample="https://behance.net/peterhephzibah"
+           class="glass-btn text-xs py-2 px-4"
+           title="Contact Dud: Replace with your Behance URL">
+          <span>Behance</span>
+          <span class="dud-tag">Dud</span>
+        </a>
+
+        <!-- CONTACT DUD: X (TWITTER) -->
+        <a href="#" 
+           data-dud="true" 
+           data-platform="X (Twitter)"
+           data-sample="https://x.com/peterhephzibah"
+           class="glass-btn text-xs py-2 px-4"
+           title="Contact Dud: Replace with your X URL">
+          <span>X / Twitter</span>
+          <span class="dud-tag">Dud</span>
+        </a>
+
+        <!-- CONTACT DUD: WHATSAPP -->
+        <a href="#" 
+           data-dud="true" 
+           data-platform="WhatsApp"
+           data-sample="https://wa.me/2340000000000"
+           class="glass-btn text-xs py-2 px-4"
+           title="Contact Dud: Replace with your WhatsApp URL">
+          <span>WhatsApp</span>
+          <span class="dud-tag">Dud</span>
+        </a>
+
+      </div>
+
+      <!-- Clean Minimal Inquiry Form -->
+      <div class="mt-12 p-8 rounded-2xl bg-[#080808] border border-zinc-800 text-left max-w-xl mx-auto">
+        <form id="transmission-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs text-zinc-400 mb-1">Your Name</label>
+              <input type="text" required placeholder="Name" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
+            </div>
+            <div>
+              <label class="block text-xs text-zinc-400 mb-1">Contact Email</label>
+              <input type="email" required placeholder="name@domain.com" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1">Project Scope</label>
+            <select class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white focus:outline-none focus:border-white transition-colors text-xs font-sans">
+              <option>Visual Identity System</option>
+              <option>Bespoke Typography & Letterforms</option>
+              <option>Packaging & Environmental</option>
+              <option>Brand Advisory</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1">Message</label>
+            <textarea rows="3" placeholder="Brief project details..." class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-2.5 rounded-lg bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors">
+            Send Inquiry →
+          </button>
+        </form>
+
+        <div id="transmission-success" class="hidden mt-4 p-3 rounded-lg bg-zinc-900 border border-zinc-700 text-white text-xs text-center">
+          Inquiry sent. Peter will respond within 24 hours.
+        </div>
+      </div>
+
+      <!-- Minimal Footer -->
+      <footer class="mt-20 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600 gap-2">
+        <span>© 2019 — 2026 Peter Hephzibah</span>
+        <span>7 Years Experience · Brand Design</span>
+      </footer>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CONTACT DUD HELPER TOAST
+       ========================================================================== -->
+  <div id="dud-toast" class="hidden">
+    <div class="px-5 py-4 rounded-xl bg-zinc-950 border border-zinc-700 text-white shadow-2xl max-w-sm flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-bold tracking-neg-1 uppercase">
+          <span id="toast-platform">LINKEDIN</span> Placeholder
+        </span>
+        <button id="toast-close" class="text-zinc-500 hover:text-white text-xs p-1">✕</button>
+      </div>
+      <p class="text-xs text-zinc-400">
+        Replace <code class="text-white bg-zinc-900 px-1 py-0.5 rounded">href="#"</code> in <code class="text-white">index.html</code> with your URL:
+      </p>
+      <div class="flex items-center justify-between gap-2 p-2 rounded bg-black border border-zinc-800 text-xs text-zinc-300">
+        <code id="toast-snippet" class="truncate font-mono text-[11px]">href="..."</code>
+        <button id="toast-copy-btn" class="px-2 py-0.5 rounded bg-white text-black text-[10px] font-bold">
+          COPY
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL (CLEAN BLACK & WHITE)
+       ========================================================================== -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/90 backdrop-blur-sm">
+    <div class="modal-box relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-zinc-950 border border-zinc-800 p-6 md:p-10 shadow-2xl">
+      
+      <button id="modal-close-btn" class="absolute top-6 right-6 w-8 h-8 rounded-full bg-zinc-900 hover:bg-white hover:text-black flex items-center justify-center text-xs transition-colors">
+        ✕
+      </button>
+
+      <span id="modal-category" class="text-xs text-zinc-500 uppercase tracking-wider">Discipline</span>
+      <h2 id="modal-title" class="font-bold text-2xl md:text-3xl text-white mt-1 tracking-neg-1">Title</h2>
+      
+      <div class="flex items-center gap-3 mt-2 text-xs text-zinc-500">
+        <span id="modal-year">2025</span>
+        <span>·</span>
+        <span>Peter Hephzibah</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-zinc-900">
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-zinc-400 mb-2">Challenge</h4>
+          <p id="modal-challenge" class="text-xs text-zinc-300 leading-relaxed font-light"></p>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-zinc-400 mb-2">Solution</h4>
+          <p id="modal-solution" class="text-xs text-zinc-300 leading-relaxed font-light"></p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-6 border-t border-zinc-900">
+        <h4 class="text-xs uppercase tracking-wider text-zinc-500 mb-2">Deliverables</h4>
+        <div id="modal-deliverables" class="flex flex-wrap gap-2"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Core Script -->
+  <script src="app.js"></script>
+</body>
+</html>
