@@ -1,0 +1,394 @@
+/* ==========================================================================
+   PETER HEPHZIBAH — MINIMALISTIC FUTURISTIC LIQUID GLASS PORTFOLIO
+   Design Architecture: Liquid Glassmorphism, Precision Minimalism, Fluid Motion
+   ========================================================================== */
+
+:root {
+  --bg-primary: #050608;
+  --bg-secondary: #0a0d14;
+  --text-primary: #F3F5F9;
+  --text-secondary: #8E96A4;
+  --text-muted: #525968;
+  --accent-cyan: #00F0FF;
+  --accent-indigo: #6E56CF;
+  --accent-emerald: #00FFB2;
+  --accent-liquid: #E0E7FF;
+  
+  --glass-bg: rgba(14, 18, 26, 0.42);
+  --glass-bg-hover: rgba(22, 28, 40, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-highlight: rgba(255, 255, 255, 0.22);
+  --glass-specular: rgba(255, 255, 255, 0.12);
+  --glass-blur: 24px;
+  
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  selection-background-color: var(--accent-cyan);
+  selection-color: #000;
+}
+
+::selection {
+  background: rgba(0, 240, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   TEXT PULL-UP ANIMATION SYSTEM
+   ========================================================================== */
+.pull-up-mask {
+  display: block;
+  overflow: hidden;
+  line-height: 1.15;
+  padding-bottom: 0.12em;
+}
+
+.pull-up-inline {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: 1.15;
+  padding-bottom: 0.08em;
+}
+
+.pull-up-text {
+  display: inline-block;
+  transform: translateY(115%) rotateX(15deg);
+  opacity: 0;
+  transform-origin: bottom center;
+  transition: transform 1.15s var(--ease-out-expo), opacity 0.85s var(--ease-out-expo);
+  will-change: transform, opacity;
+}
+
+.is-revealed .pull-up-text,
+.pull-up-active .pull-up-text {
+  transform: translateY(0%) rotateX(0deg);
+  opacity: 1;
+}
+
+/* Stagger utilities */
+.delay-100 { transition-delay: 100ms !important; }
+.delay-150 { transition-delay: 150ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-250 { transition-delay: 250ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-350 { transition-delay: 350ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-450 { transition-delay: 450ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+.delay-600 { transition-delay: 600ms !important; }
+.delay-700 { transition-delay: 700ms !important; }
+.delay-800 { transition-delay: 800ms !important; }
+
+/* ==========================================================================
+   LIQUID GLASS ENGINE & CONTAINERS
+   ========================================================================== */
+.liquid-glass-card {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 
+    0 20px 50px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 var(--glass-specular),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+  border-radius: 1.5rem;
+  transition: all 0.5s var(--ease-out-expo);
+  overflow: hidden;
+}
+
+.liquid-glass-card:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-highlight);
+  box-shadow: 
+    0 30px 70px -15px rgba(0, 240, 255, 0.08),
+    0 20px 40px -10px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 240, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Glass Pill (Buttons, Badges & Duds) */
+.glass-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.15rem;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9999px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.35s var(--ease-out-expo);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 8px 25px rgba(0, 240, 255, 0.15);
+}
+
+.glass-pill:active {
+  transform: translateY(0);
+}
+
+/* Special Dud Styling */
+.dud-badge {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00F0FF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.glass-pill:hover .dud-badge {
+  background: rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+/* Liquid Sheen Animation */
+.liquid-sheen {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.liquid-glass-card:hover .liquid-sheen,
+.glass-pill:hover .liquid-sheen {
+  animation: liquidFlow 1.4s ease-in-out forwards;
+}
+
+@keyframes liquidFlow {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+/* Interactive Liquid Background Canvas */
+#liquid-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+/* Subtle futuristic grid overlay */
+.futuristic-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating Liquid Glass Dock */
+.liquid-dock {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.65rem;
+  background: rgba(12, 16, 24, 0.65);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(0, 240, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s var(--ease-out-expo), opacity 0.3s ease;
+}
+
+.liquid-dock.hidden-dock {
+  transform: translate(-50%, 150%);
+  opacity: 0;
+}
+
+/* Custom Interactive Cursor */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #00F0FF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 240, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.cursor-hover .custom-cursor-ring {
+  width: 58px;
+  height: 58px;
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 240, 255, 0.06);
+}
+
+.cursor-hover .custom-cursor-dot {
+  background: #FFFFFF;
+}
+
+/* Toast Notifications for Dud Clicks */
+#dud-toast {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+#dud-toast.toast-show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Case study modal */
+#project-modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-out-expo);
+}
+
+#project-modal.modal-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#project-modal .modal-content {
+  transform: translateY(30px) scale(0.97);
+  transition: transform 0.45s var(--ease-out-expo);
+}
+
+#project-modal.modal-active .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/* Sound indicator wave */
+.sound-wave-bar {
+  width: 2px;
+  height: 12px;
+  background: var(--accent-cyan);
+  border-radius: 2px;
+  animation: soundBounce 1.2s ease-in-out infinite alternate;
+}
+
+.sound-wave-bar:nth-child(2) { animation-delay: 0.2s; height: 16px; }
+.sound-wave-bar:nth-child(3) { animation-delay: 0.4s; height: 8px; }
+
+@keyframes soundBounce {
+  0% { transform: scaleY(0.4); }
+  100% { transform: scaleY(1); }
+}
+
+.sound-muted .sound-wave-bar {
+  animation: none;
+  transform: scaleY(0.2);
+  background: var(--text-muted);
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.4);
+}
