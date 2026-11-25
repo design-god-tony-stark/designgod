@@ -46,7 +46,7 @@
   <header class="fixed top-0 left-0 right-0 z-40 px-6 py-4 md:px-12 glass-top-panel">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       
-      <!-- Monogram & Name only (removed '7 years exp active studio') -->
+      <!-- Monogram & Name -->
       <a href="#" class="flex items-center gap-3">
         <span class="font-bold text-sm tracking-neg-1 text-white uppercase">Peter Hephzibah</span>
       </a>
@@ -67,8 +67,7 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION — CENTERED, REDUCED NAME SIZE, TEXT PULL-UP ANIMATION
-       (Removed top badges and contact links below header)
+       HERO SECTION — CENTERED, SPACE GROTESK, TEXT PULL-UP ANIMATION
        ========================================================================== -->
   <main>
     <section class="min-h-[85vh] pt-36 pb-20 px-6 flex flex-col items-center justify-center text-center relative hero-pull-up-group max-w-4xl mx-auto">
@@ -76,7 +75,7 @@
       <!-- Headline & Name (Reduced by 40%, Space Grotesk, character spacing -1) -->
       <div class="pull-up-mask">
         <h1 class="pull-up-text font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-neg-1">
-         Building distinctive<br>brands that make<br>businesses matter.
+          PETER HEPHZIBAH
         </h1>
       </div>
 
@@ -108,7 +107,8 @@
     </section>
 
     <!-- ==========================================================================
-         SELECTED WORKS (CLEAN MINIMALIST CARDS)
+         SELECTED WORKS (REAL ASSETS: QORV, DMFLUX, DEPLOY)
+         "Use the main logo as the display. Get the files from the assets and use as the portfolio images."
          ========================================================================== -->
     <section id="work" class="py-24 px-6 md:px-12 max-w-6xl mx-auto border-t border-zinc-900 scroll-pull-up">
       
@@ -120,94 +120,123 @@
           </h2>
         </div>
         <p class="text-xs text-zinc-400 max-w-xs mt-2 md:mt-0 font-light">
-          Identities, typographic architectures, and brand systems across 7 years of practice.
+          Brand identities, custom typography, and complete visual systems from the studio archives.
         </p>
       </div>
 
-      <!-- Minimalist Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Project 1: AETHER AUTOMOTIVE -->
-        <article class="minimal-card p-6 cursor-pointer group" data-project-id="aether">
-          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
-            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="38" stroke="white" stroke-width="1.5"/>
-              <circle cx="50" cy="50" r="24" stroke="#666" stroke-width="1"/>
-              <line x1="50" y1="20" x2="50" y2="80" stroke="white" stroke-width="1.5"/>
-              <line x1="20" y1="50" x2="80" y2="50" stroke="white" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">EV Mobility · 2026</span>
-              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Aether Automotive</h3>
+        <!-- Project 1: QORV (korv) -->
+        <article class="minimal-card p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Main Logo Display -->
+            <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="qorv">
+              <img src="assets/qorv/qovinsta13.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
+                Main Logo
+              </span>
             </div>
-            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+
+            <!-- Meta & Title -->
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Brand System · 2026</span>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">QORV</h3>
+              </div>
+              <a href="qorv.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+                ↗
+              </a>
+            </div>
+
+            <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+              Complete brand identity system, Google Sans typographic hierarchy, outdoor billboard infrastructure, and executive digital presence.
+            </p>
           </div>
-          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-            Autonomous mobility brand architecture, variable typography, and vehicle interface visual identity.
-          </p>
+
+          <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
+            <button data-project-id="qorv" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+              <span>Quick View Gallery</span>
+              <span>↓</span>
+            </button>
+            <a href="qorv.html" class="glass-btn text-[11px] py-1 px-3">
+              Full Page ↗
+            </a>
+          </div>
         </article>
 
-        <!-- Project 2: VALENCE SYNTHETICS -->
-        <article class="minimal-card p-6 cursor-pointer group" data-project-id="valence">
-          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
-            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-              <polygon points="50,15 85,35 85,75 50,95 15,75 15,35" stroke="white" stroke-width="1.5"/>
-              <polygon points="50,30 72,43 72,67 50,80 28,67 28,43" stroke="#666" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Bio-Computing · 2025</span>
-              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Valence Synthetics</h3>
+        <!-- Project 2: DMFLUX -->
+        <article class="minimal-card p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Main Logo Display -->
+            <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="dmflux">
+              <img src="assets/dmflux/dmfluxsoc.png" alt="Dmflux Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
+                Main Logo
+              </span>
             </div>
-            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Product & Campaign · 2025</span>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Dmflux</h3>
+              </div>
+              <a href="dmflux.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+                ↗
+              </a>
+            </div>
+
+            <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+              3D glass optical symbol, visitor analytics platform design, comprehensive Lagos transit billboard campaign, and mobile story templates.
+            </p>
           </div>
-          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-            Computational biology identity system, scientific publication design, and visual brand language.
-          </p>
+
+          <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
+            <button data-project-id="dmflux" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+              <span>Quick View Gallery</span>
+              <span>↓</span>
+            </button>
+            <a href="dmflux.html" class="glass-btn text-[11px] py-1 px-3">
+              Full Page ↗
+            </a>
+          </div>
         </article>
 
-        <!-- Project 3: KROMA PARFUM -->
-        <article class="minimal-card p-6 cursor-pointer group" data-project-id="kroma">
-          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
-            <svg class="w-20 h-28 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 130" fill="none">
-              <rect x="25" y="40" width="50" height="75" rx="4" stroke="white" stroke-width="1.5"/>
-              <rect x="42" y="24" width="16" height="16" stroke="#666" stroke-width="1.5"/>
-              <line x1="35" y1="75" x2="65" y2="75" stroke="white" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Luxury Packaging · 2024</span>
-              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Kroma Parfumerie</h3>
+        <!-- Project 3: DEPLOY -->
+        <article class="minimal-card p-6 flex flex-col justify-between group">
+          <div>
+            <!-- Main Logo Display -->
+            <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="deploy">
+              <img src="assets/Deploy/deploy_sm2.png" alt="Deploy Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
+                Main Logo
+              </span>
             </div>
-            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
-          </div>
-          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-            Minimalist perfume packaging, bespoke Roman typography, and structural bottle unboxing system.
-          </p>
-        </article>
 
-        <!-- Project 4: NEXUS PROTOCOL -->
-        <article class="minimal-card p-6 cursor-pointer group" data-project-id="nexus">
-          <div class="h-56 rounded-lg bg-[#050505] border border-zinc-800 flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
-            <svg class="w-24 h-24 text-white group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-              <path d="M20 50L50 20L80 50L50 80Z" stroke="white" stroke-width="1.5"/>
-              <path d="M35 50L50 35L65 50L50 65Z" stroke="#666" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Fintech Protocol · 2024</span>
-              <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Nexus Protocol</h3>
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Cloud Infrastructure · 2026</span>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Deploy</h3>
+              </div>
+              <a href="deploy.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+                ↗
+              </a>
             </div>
-            <span class="text-xs text-zinc-400 group-hover:text-white transition-colors">↗</span>
+
+            <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
+              High-luminescence cyberpunk visual system, laser green palette specs, physical smart hardware emblem, and fast developer metrics portal.
+            </p>
           </div>
-          <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-            Zero-knowledge cryptographic infrastructure branding, structural grid system, and technical portal.
-          </p>
+
+          <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
+            <button data-project-id="deploy" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+              <span>Quick View Gallery</span>
+              <span>↓</span>
+            </button>
+            <a href="deploy.html" class="glass-btn text-[11px] py-1 px-3">
+              Full Page ↗
+            </a>
+          </div>
         </article>
 
       </div>
@@ -269,7 +298,7 @@
         </div>
         <div>
           <span class="text-zinc-600 block mb-1">04</span>
-          <span class="text-white font-medium block">Luxury Packaging</span>
+          <span class="text-white font-medium block">Environmental & Packaging</span>
         </div>
       </div>
 
@@ -277,7 +306,6 @@
 
     <!-- ==========================================================================
          CONTACT SECTION — MINIMALIST WITH CONTACT DUDS
-         (LinkedIn, Behance, X, WhatsApp)
          ========================================================================== -->
     <section id="contact" class="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center border-t border-zinc-900 scroll-pull-up">
       
@@ -289,9 +317,7 @@
         Available for select brand identity commissions, typography projects, and design advisory worldwide.
       </p>
 
-      <!-- ======================================================================
-           CONTACT DUDS BUTTONS (GLASS ACCENT BUTTONS)
-           ====================================================================== -->
+      <!-- Contact Duds (Glass Accent Buttons) -->
       <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
 
         <!-- CONTACT DUD: LINKEDIN -->
@@ -331,7 +357,7 @@
         <a href="#" 
            data-dud="true" 
            data-platform="WhatsApp"
-           data-sample="https://wa.me/2340000000000"
+           data-sample="https://wa.me/2349134308318"
            class="glass-btn text-xs py-2 px-4"
            title="Contact Dud: Replace with your WhatsApp URL">
           <span>WhatsApp</span>
@@ -412,38 +438,58 @@
   </div>
 
   <!-- ==========================================================================
-       CASE STUDY DETAIL MODAL (CLEAN BLACK & WHITE)
+       CASE STUDY DETAIL MODAL WITH MULTI-IMAGE GALLERY
        ========================================================================== -->
-  <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/90 backdrop-blur-sm">
-    <div class="modal-box relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-zinc-950 border border-zinc-800 p-6 md:p-10 shadow-2xl">
+  <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/95 backdrop-blur-md">
+    <div class="modal-box relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl bg-zinc-950 border border-zinc-800 p-6 md:p-10 shadow-2xl">
       
-      <button id="modal-close-btn" class="absolute top-6 right-6 w-8 h-8 rounded-full bg-zinc-900 hover:bg-white hover:text-black flex items-center justify-center text-xs transition-colors">
+      <!-- Close Button -->
+      <button id="modal-close-btn" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-zinc-900 hover:bg-white hover:text-black flex items-center justify-center text-xs transition-colors z-20">
         ✕
       </button>
 
-      <span id="modal-category" class="text-xs text-zinc-500 uppercase tracking-wider">Discipline</span>
-      <h2 id="modal-title" class="font-bold text-2xl md:text-3xl text-white mt-1 tracking-neg-1">Title</h2>
+      <!-- Category & Header -->
+      <span id="modal-category" class="text-xs text-zinc-500 uppercase tracking-wider">Category</span>
+      <h2 id="modal-title" class="font-bold text-3xl md:text-4xl text-white mt-1 tracking-neg-1">Title</h2>
       
       <div class="flex items-center gap-3 mt-2 text-xs text-zinc-500">
-        <span id="modal-year">2025</span>
+        <span id="modal-year">2026</span>
         <span>·</span>
-        <span>Peter Hephzibah</span>
+        <span>Lead Brand Designer: Peter Hephzibah</span>
+        <span>·</span>
+        <a id="modal-full-link" href="#" class="text-white hover:underline">Open Dedicated Page ↗</a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-zinc-900">
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-zinc-400 mb-2">Challenge</h4>
-          <p id="modal-challenge" class="text-xs text-zinc-300 leading-relaxed font-light"></p>
+      <!-- Main Showcase Image -->
+      <div class="mt-6 rounded-xl overflow-hidden bg-black border border-zinc-800 flex items-center justify-center max-h-[500px]">
+        <img id="modal-main-img" src="" alt="Case Study Main Display" class="w-full h-auto max-h-[500px] object-contain">
+      </div>
+
+      <!-- Narrative -->
+      <div class="mt-6 p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/80">
+        <p id="modal-tagline" class="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed"></p>
+      </div>
+
+      <!-- Gallery Grid of Portfolio Images -->
+      <div class="mt-8 pt-6 border-t border-zinc-900">
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="text-xs uppercase tracking-wider text-white font-bold">// Portfolio Images & Brand Assets</h4>
+          <span class="text-[11px] text-zinc-500">Click any image to enlarge</span>
         </div>
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-zinc-400 mb-2">Solution</h4>
-          <p id="modal-solution" class="text-xs text-zinc-300 leading-relaxed font-light"></p>
+        <div id="modal-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <!-- Dynamically populated -->
         </div>
       </div>
 
-      <div class="mt-6 pt-6 border-t border-zinc-900">
-        <h4 class="text-xs uppercase tracking-wider text-zinc-500 mb-2">Deliverables</h4>
-        <div id="modal-deliverables" class="flex flex-wrap gap-2"></div>
+      <!-- Deliverables & Scope -->
+      <div class="mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-zinc-500 mb-2">Deliverables</h4>
+          <div id="modal-deliverables" class="flex flex-wrap gap-2"></div>
+        </div>
+        <a id="modal-bottom-link" href="#" class="glass-btn glass-btn-solid text-xs py-2 px-5 whitespace-nowrap">
+          Open Case Study Page ↗
+        </a>
       </div>
 
     </div>
