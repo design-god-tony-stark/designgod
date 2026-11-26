@@ -14,20 +14,21 @@ function initTextPullUp() {
     }, 100);
   }
 
-  const scrollPullUps = document.querySelectorAll('.scroll-pull-up');
+  const scrollElements = document.querySelectorAll('.scroll-pull-up, .scroll-reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-revealed');
+        entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.1,
+    threshold: 0.12,
     rootMargin: '0px 0px -40px 0px'
   });
 
-  scrollPullUps.forEach(el => observer.observe(el));
+  scrollElements.forEach(el => observer.observe(el));
 }
 
 // ==========================================================================
