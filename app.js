@@ -164,6 +164,41 @@ const caseStudies = [
       { src: 'assets/Deploy/deploy_sm10.png', title: 'Social Marketing Display' },
       { src: 'assets/Deploy/deploy_sm12.png', title: 'Social Grid Suite' }
     ]
+  },
+  {
+    id: 'social-media-designs',
+    title: 'Social media designs',
+    category: 'High-Impact Social Systems · 2024–2026',
+    year: '2024 – 2026',
+    pageUrl: 'social-media-designs.html',
+    mainImage: 'assets/Social media designs/qorv smds.png',
+    tagline: '"Stop chasing customers. Build demand instead." Strategic high-conversion carousels, 3D futuristic product visuals, key announcement graphics, and systematic social media frameworks.',
+    deliverables: [
+      '3D Futuristic Key Visuals',
+      'AI & Tech Launch Drops',
+      'Project Amplify Carousels',
+      'LinkedIn & IG Leadership Slides',
+      'Conversion Receipt Visuals',
+      'Visitor Intelligence Assets',
+      'Performance Metric Graphics',
+      'Growth & Engagement Creatives'
+    ],
+    gallery: [
+      { src: 'assets/Social media designs/qorv smds.png', title: 'Main Display: 3D Growth Architecture' },
+      { src: 'assets/Social media designs/CHATATP7.png', title: 'ChatATP: Studio is LIVE (Cyborg Astronaut)' },
+      { src: 'assets/Social media designs/CHATATP8.png', title: 'ChatATP: A New Season To Build Smarter' },
+      { src: 'assets/Social media designs/CHATATP9.png', title: 'Gurulabs is Cooking! (Bionic Lab Visual)' },
+      { src: 'assets/Social media designs/qorv carousel 11.png', title: 'Project Amplify: QORV x TAS Strategic Alliance' },
+      { src: 'assets/Social media designs/qorv carousel 12.png', title: 'QORV Value Proposition & Scale Slide' },
+      { src: 'assets/Social media designs/qorv carousel 13 [3].png', title: 'QORV Call-to-Scale Slide' },
+      { src: 'assets/Social media designs/dmfluxsoc18.png', title: 'Dmflux Campaign Receipt Graphic' },
+      { src: 'assets/Social media designs/dmfluxsoc19.png', title: 'Dmflux Conversion UI & Analytics' },
+      { src: 'assets/Social media designs/dmfluxsoc20.png', title: 'Dmflux Visitor Intelligence Spec' },
+      { src: 'assets/Social media designs/dmfluxsoc22.png', title: 'Dmflux Performance Metric Graphic' },
+      { src: 'assets/Social media designs/dmfluxsoc23.png', title: 'Dmflux Product Experience Graphic' },
+      { src: 'assets/Social media designs/dmfluxsoc25.png', title: 'Dmflux Brand Value Statement' },
+      { src: 'assets/Social media designs/dmfluxsoc26.png', title: 'Dmflux Growth & Engagement Creative' }
+    ]
   }
 ];
 
