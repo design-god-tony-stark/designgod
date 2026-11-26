@@ -1,23 +1,27 @@
 /* ==========================================================================
-   PETER HEPHZIBAH — MINIMALISTIC BLACK & WHITE PORTFOLIO
+   PETER HEPHZIBAH — MINIMALISTIC PORTFOLIO
    Typography: Space Grotesk (character spacing: -1px)
-   Aesthetic: Monochromatic High-Contrast, Pure Black & White, Glass Accents
+   Palette: Very Dark Red to Black Gradient, Pale Red (#FFBFBF) Titles & Light Buttons,
+            Dark Red Buttons, Red Rim Lighting on Hover
    ========================================================================== */
 
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #080808;
-  --bg-card: #0d0d0d;
+  --bg-primary: #020001;
+  --bg-dark-red: #1a0407;
+  --bg-card: rgba(15, 3, 6, 0.75);
+  --color-pale-red: #FFBFBF;
+  --color-dark-red: #2d060c;
+  --color-dark-red-hover: #4b0a14;
   --text-primary: #FFFFFF;
-  --text-secondary: #9E9E9E;
-  --text-muted: #555555;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.35);
+  --text-secondary: #c49a9a;
+  --text-muted: #734848;
+  --border-subtle: rgba(255, 90, 115, 0.14);
+  --border-hover: rgba(255, 191, 191, 0.45);
 
-  --glass-panel: rgba(8, 8, 8, 0.75);
-  --glass-pill: rgba(255, 255, 255, 0.04);
-  --glass-pill-hover: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-panel: rgba(18, 3, 6, 0.82);
+  --glass-pill: rgba(45, 6, 12, 0.75);
+  --glass-pill-hover: rgba(75, 10, 20, 0.9);
+  --glass-border: rgba(255, 90, 115, 0.25);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -31,6 +35,9 @@
 
 html {
   background-color: var(--bg-primary);
+  background-image: radial-gradient(ellipse 90% 70% at 50% -10%, #1c0408 0%, #0c0103 45%, #020001 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
   color: var(--text-primary);
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   scroll-behavior: smooth;
@@ -42,7 +49,10 @@ html {
 body {
   min-height: 100vh;
   position: relative;
-  background-color: var(--bg-primary);
+  background-color: transparent !important;
+  background-image: radial-gradient(ellipse 90% 70% at 50% -10%, #1c0408 0%, #0c0103 45%, #020001 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
   color: var(--text-primary);
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.5px;
@@ -50,18 +60,24 @@ body {
 }
 
 ::selection {
-  background: #FFFFFF;
-  color: #000000;
+  background: #FFBFBF;
+  color: #160205;
 }
 
 /* ==========================================================================
-   TYPOGRAPHY - SPACE GROTESK & CHARACTER SPACING -1
+   TYPOGRAPHY - SPACE GROTESK, CHARACTER SPACING -1, PALE RED (#FFBFBF) TITLES
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -1px !important;
   font-weight: 700;
   line-height: 1.1;
+  color: #FFBFBF !important;
+}
+
+.title-pale-red,
+.text-pale-red {
+  color: #FFBFBF !important;
 }
 
 .tracking-neg-1 {
@@ -148,6 +164,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ==========================================================================
    GLASS ELEMENTS (RESTRICTED TO TOP PANEL & SELECT BUTTONS)
+   Light buttons: Pale Red (#FFBFBF)
+   Dark buttons: Dark Red (rgba(45, 6, 12, 0.75))
    ========================================================================== */
 .glass-top-panel {
   background: var(--glass-panel);
@@ -156,17 +174,18 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* Dark Red Buttons */
 .glass-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
-  background: var(--glass-pill);
+  background: rgba(45, 6, 12, 0.75) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 90, 115, 0.28) !important;
   border-radius: 9999px;
-  color: var(--text-primary);
+  color: #FFBFBF !important;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.85rem;
   letter-spacing: -0.5px;
@@ -175,30 +194,56 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.25s ease;
   cursor: pointer;
   user-select: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 }
 
 .glass-btn:hover {
-  background: var(--glass-pill-hover);
-  border-color: var(--border-hover);
-  color: #FFFFFF;
+  background: rgba(80, 12, 22, 0.92) !important;
+  border-color: rgba(255, 191, 191, 0.55) !important;
+  color: #FFFFFF !important;
   transform: translateY(-1px);
+  box-shadow: 0 0 22px -2px rgba(220, 25, 50, 0.45);
 }
 
 .glass-btn:active {
   transform: translateY(0);
 }
 
-.glass-btn-solid {
-  background: #FFFFFF;
-  color: #000000;
-  border: 1px solid #FFFFFF;
+/* Light Buttons: Pale Red (#FFBFBF) */
+.glass-btn-solid,
+#form-submit-btn {
+  background: #FFBFBF !important;
+  color: #140205 !important;
+  border: 1px solid #FFBFBF !important;
   font-weight: 600;
+  box-shadow: 0 0 22px -3px rgba(255, 191, 191, 0.4);
 }
 
-.glass-btn-solid:hover {
-  background: #000000;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.glass-btn-solid:hover,
+#form-submit-btn:hover {
+  background: #FFFFFF !important;
+  color: #140205 !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 0 28px 0px rgba(255, 191, 191, 0.65);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   SECTION HOVER RIM LIGHTING (RED)
+   Atmospheric red perimeter rim glow on section and card hover
+   ========================================================================== */
+section {
+  position: relative;
+  border-radius: 1.5rem;
+  transition: border-color 0.45s ease, box-shadow 0.45s ease;
+}
+
+section:hover {
+  border-color: rgba(255, 100, 125, 0.45) !important;
+  box-shadow: 
+    0 -10px 45px -10px rgba(220, 25, 50, 0.25),
+    0 0 50px -15px rgba(200, 20, 45, 0.2),
+    inset 0 1px 1px 0 rgba(255, 191, 191, 0.35);
 }
 
 /* Dud Tag */
@@ -206,26 +251,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.65rem;
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
+  background: rgba(255, 191, 191, 0.12);
+  border: 1px solid rgba(255, 191, 191, 0.25);
+  color: #FFBFBF;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-/* Minimal Project Cards */
+/* Minimal Project Cards with Red Rim Lighting */
 .minimal-card {
-  background: #080808;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(14, 3, 6, 0.7);
+  border: 1px solid rgba(255, 80, 100, 0.12);
   border-radius: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   overflow: hidden;
 }
 
 .minimal-card:hover {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 191, 191, 0.45);
   transform: translateY(-2px);
-  background: #0d0d0d;
+  background: rgba(25, 5, 10, 0.85);
+  box-shadow: 
+    0 0 35px -8px rgba(220, 25, 50, 0.35),
+    inset 0 1px 1px 0 rgba(255, 191, 191, 0.3);
 }
 
 /* Custom Minimalist Cursor */
@@ -235,9 +283,14 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 6px;
   height: 6px;
-  background: #FFFFFF;
+  background: #FFBFBF;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+  box-shadow: 0 0 10px rgba(255, 191, 191, 0.85);
+}
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: transform 0.08s ease-out;
