@@ -1,9 +1,12 @@
 /* ==========================================================================
    PETER HEPHZIBAH — MINIMALISTIC PORTFOLIO
-   Typography: Space Grotesk (character spacing: -1px)
+   Titles Font: Plus Jakarta Sans (character spacing: -2px)
+   Body Font: Space Grotesk
    Palette: Very Dark Red to Black Gradient, Pale Red (#FFBFBF) Titles & Light Buttons,
             Dark Red Buttons, Red Rim Lighting on Hover
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
   --bg-primary: #020001;
@@ -65,14 +68,21 @@ body {
 }
 
 /* ==========================================================================
-   TYPOGRAPHY - SPACE GROTESK, CHARACTER SPACING -1, PALE RED (#FFBFBF) TITLES
+   TYPOGRAPHY - PLUS JAKARTA SANS ON ALL TITLES, CHARACTER SPACING -2PX
+   Default accent titles: Pale Red (#FFBFBF)
+   Primary featured titles (Header, Selected Works, 7 Years): Pure White (#FFFFFF)
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -1px !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: -2px !important;
   font-weight: 700;
-  line-height: 1.1;
-  color: #FFBFBF !important;
+  line-height: 1.18;
+  color: #FFBFBF;
+}
+
+.text-white,
+.heading-white {
+  color: #FFFFFF !important;
 }
 
 .title-pale-red,
@@ -80,8 +90,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFBFBF !important;
 }
 
-.tracking-neg-1 {
+.tracking-neg-1,
+.tracking-neg-2 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
   letter-spacing: -2px !important;
+}
+
+.tracking-neg-1px {
+  letter-spacing: -1px !important;
 }
 
 /* ==========================================================================
@@ -90,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 .pull-up-mask {
   display: block;
   overflow: hidden;
-  line-height: 1.15;
-  padding-bottom: 0.08em;
+  line-height: 1.2;
+  padding-bottom: 0.75rem;
 }
 
 .pull-up-inline {
@@ -229,21 +245,102 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   SECTION HOVER RIM LIGHTING (RED)
+   FRACTAL GLASS HEADER BACKDROP WITH RED GLOW
+   Fluted vertical prism glass ribs refracting a deep crimson red aura
+   ========================================================================== */
+.hero-fractal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 92vh;
+  min-height: 660px;
+  max-height: 940px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.96) 62%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.96) 62%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-red-glow {
+  position: absolute;
+  inset: -12% -10% 0 -10%;
+  background:
+    radial-gradient(ellipse 46% 50% at 50% 42%, rgba(225, 22, 54, 0.48) 0%, rgba(165, 12, 34, 0.26) 42%, transparent 76%),
+    radial-gradient(ellipse 72% 58% at 50% 34%, rgba(255, 95, 120, 0.16) 0%, rgba(115, 6, 22, 0.18) 52%, transparent 82%);
+  filter: blur(30px);
+  transform: translateZ(0);
+}
+
+.hero-fractal-flutes {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 191, 191, 0.095) 1px,
+      rgba(255, 85, 110, 0.035) 5px,
+      rgba(4, 0, 2, 0.56) 15px,
+      rgba(0, 0, 0, 0.74) 23px,
+      rgba(255, 191, 191, 0.05) 27px,
+      rgba(255, 255, 255, 0.015) 29px
+    );
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  opacity: 0.115;
+  mask-image: radial-gradient(ellipse 88% 82% at 50% 42%, #000000 28%, rgba(0, 0, 0, 0.65) 64%, transparent 98%);
+  -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 42%, #000000 28%, rgba(0, 0, 0, 0.65) 64%, transparent 98%);
+}
+
+.hero-fractal-prism {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      118deg,
+      transparent 0px,
+      transparent 44px,
+      rgba(255, 191, 191, 0.04) 45px,
+      rgba(255, 75, 100, 0.03) 53px,
+      rgba(0, 0, 0, 0.28) 72px,
+      transparent 92px
+    ),
+    repeating-linear-gradient(
+      62deg,
+      transparent 0px,
+      transparent 62px,
+      rgba(255, 255, 255, 0.025) 63px,
+      rgba(220, 30, 60, 0.035) 75px,
+      transparent 108px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='fractalNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23fractalNoise)' opacity='0.045'/%3E%3C/svg%3E");
+  mix-blend-mode: screen;
+  opacity: 0.1;
+  mask-image: radial-gradient(ellipse 78% 76% at 50% 42%, #000000 22%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 76% at 50% 42%, #000000 22%, transparent 95%);
+}
+
+/* ==========================================================================
+   SECTION HOVER RIM LIGHTING (RED — +50% GLOW INTENSITY)
    Atmospheric red perimeter rim glow on section and card hover
    ========================================================================== */
 section {
   position: relative;
+  z-index: 2;
   border-radius: 1.5rem;
   transition: border-color 0.45s ease, box-shadow 0.45s ease;
 }
 
 section:hover {
-  border-color: rgba(255, 100, 125, 0.45) !important;
+  border-color: rgba(255, 100, 125, 0.68) !important;
   box-shadow: 
-    0 -10px 45px -10px rgba(220, 25, 50, 0.25),
-    0 0 50px -15px rgba(200, 20, 45, 0.2),
-    inset 0 1px 1px 0 rgba(255, 191, 191, 0.35);
+    0 -10px 68px -6px rgba(220, 25, 50, 0.38),
+    0 0 75px -10px rgba(200, 20, 45, 0.30),
+    inset 0 0 0 1px rgba(255, 90, 115, 0.25),
+    inset 0 1px 2px 0 rgba(255, 191, 191, 0.53),
+    inset 0 0 36px -10px rgba(220, 25, 50, 0.22);
 }
 
 /* Dud Tag */
@@ -290,10 +387,6 @@ section:hover {
   transform: translate(-50%, -50%);
   transition: transform 0.08s ease-out;
   box-shadow: 0 0 10px rgba(255, 191, 191, 0.85);
-}
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease-out;
 }
 
 /* Toast for Dud Clicks */

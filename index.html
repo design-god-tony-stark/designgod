@@ -9,10 +9,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50' y='64' fill='%23FFF' font-family='sans-serif' font-weight='700' font-size='44' text-anchor='middle'>PH</text></svg>">
 
-  <!-- Google Font: Space Grotesk exclusively -->
+  <!-- Google Fonts: Plus Jakarta Sans (Titles) & Space Grotesk (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +21,12 @@
       theme: {
         extend: {
           fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
             sans: ['"Space Grotesk"', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace'],
           },
           letterSpacing: {
-            'tightest': '-1px',
+            'tightest': '-2px',
           }
         }
       }
@@ -48,7 +49,7 @@
       
       <!-- Monogram & Name -->
       <a href="#" class="flex items-center gap-3">
-        <span class="font-bold text-sm tracking-neg-1 text-[#FFBFBF] uppercase">Peter Hephzibah</span>
+        <span class="font-bold text-sm tracking-neg-1px text-white">PH - Brand Designer</span>
       </a>
 
       <!-- Minimal Navigation Links -->
@@ -67,22 +68,29 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION — CENTERED, SPACE GROTESK, TEXT PULL-UP ANIMATION
+       HERO SECTION — CENTERED, PLUS JAKARTA SANS TITLES, FRACTAL GLASS + RED GLOW
        ========================================================================== -->
-  <main>
-    <section class="min-h-[85vh] pt-36 pb-20 px-6 flex flex-col items-center justify-center text-center relative hero-pull-up-group max-w-4xl mx-auto">
+  <main class="relative">
+    <!-- Fractal Glass + Red Glow Backdrop behind the Header / Hero Section -->
+    <div class="hero-fractal-backdrop" aria-hidden="true">
+      <div class="hero-red-glow"></div>
+      <div class="hero-fractal-flutes"></div>
+      <div class="hero-fractal-prism"></div>
+    </div>
+
+    <section class="min-h-[85vh] pt-36 pb-24 px-6 flex flex-col items-center justify-center text-center relative z-10 hero-pull-up-group max-w-4xl mx-auto">
       
-      <!-- Avatar Icon & Intro ('hi i'm peter') -->
+      <!-- Avatar Icon & Intro ('Hi, I'm Peter') -->
       <div class="pull-up-mask mb-6">
         <div class="pull-up-text flex flex-col items-center gap-3">
           <img src="assets/icons/mypic.png" alt="Peter Hephzibah" class="w-[70px] h-[70px] object-cover rounded-full border-2 border-zinc-700/80 shadow-lg">
-          <span class="text-sm sm:text-base text-zinc-400 font-normal tracking-normal lowercase">Hi, i'm Peter</span>
+          <span class="text-sm sm:text-base text-white font-normal tracking-normal">Hi, I'm Peter</span>
         </div>
       </div>
 
       <!-- Main Headline -->
       <div class="pull-up-mask">
-        <h1 class="pull-up-text delay-100 font-bold text-3xl sm:text-5xl md:text-6xl text-[#FFBFBF] tracking-neg-1 leading-[1.14]">
+        <h1 class="pull-up-text delay-100 font-bold text-3xl sm:text-5xl md:text-6xl text-white tracking-neg-1 leading-[1.18] pb-2">
           I build brands <br> through strategic <br> visual storytelling
         </h1>
       </div>
@@ -117,7 +125,7 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-4 border-b border-zinc-900 scroll-reveal">
         <div>
           <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-1">01 / Index</span>
-          <h2 class="font-bold text-3xl md:text-4xl text-[#FFBFBF] tracking-neg-1">
+          <h2 class="font-bold text-3xl md:text-4xl text-white tracking-neg-1">
             Selected Works
           </h2>
         </div>
@@ -134,7 +142,7 @@
           <div>
             <!-- Main Logo Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="qorv">
-              <img src="assets/qorv/qorv.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/qorv/qovinsta13.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Logo
               </span>
@@ -288,7 +296,7 @@
       
       <div class="mb-12 pb-4 border-b border-zinc-900 scroll-reveal">
         <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-1">02 / About</span>
-        <h2 class="font-bold text-3xl md:text-4xl text-[#FFBFBF] tracking-neg-1">
+        <h2 class="font-bold text-3xl md:text-4xl text-white tracking-neg-1">
           7 Years of Brand Practice
         </h2>
       </div>
