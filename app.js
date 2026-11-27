@@ -92,7 +92,7 @@ function initContactDuds() {
 }
 
 // ==========================================================================
-// 3. REAL CASE STUDIES DATA (QORV, DMFLUX, DEPLOY)
+// 3. REAL CASE STUDIES DATA (QORV, DMFLUX, DEPLOY, SOCIAL MEDIA DESIGNS)
 // ==========================================================================
 const caseStudies = [
   {
@@ -101,23 +101,23 @@ const caseStudies = [
     category: 'Brand Identity Architecture · 2026',
     year: '2026',
     pageUrl: 'qorv.html',
-    mainImage: 'assets/qorv/qovinsta13.png',
-    tagline: '"Visibility that drives growth. Scale strategically." Comprehensive brand identity system built on mathematical clearspace, Google Sans typography, and physical touchpoints.',
-    deliverables: ['Primary 3D Emblem & Mark', 'Logomark Geometry', 'Logo Clearspace Specs', 'Google Sans Typography Specs', 'Color Palette Architecture', 'Subway & Transit Billboards', 'Apparel & Security Mockups', 'Tablet Platform UI', 'Social Media Templates'],
+    mainImage: 'assets/Qorv/qorv-opt.png',
+    tagline: '"Building businesses that scale." Comprehensive brand identity system built on mathematical clearspace, Google Sans typography, outdoor billboards, and executive digital touchpoints.',
+    deliverables: ['Rim-Lit Hero Emblem', 'Primary Logo Presentation', 'Logomark Palette Grid', 'Logo Clearspace Specs', 'Google Sans Typography Specs', 'Color Palette Architecture', 'Subway & Street Billboards', 'Tablet Platform UI', 'Physical Merch & Mockups'],
     gallery: [
-      { src: 'assets/qorv/qovinsta13.png', title: 'Main 3D Metallic Emblem & Wordmark' },
-      { src: 'assets/qorv/qovinsta4 - Copy.png', title: 'Primary Logo Construction' },
-      { src: 'assets/qorv/qovinsta5 - Copy.png', title: 'Logomark Grid & Angles' },
-      { src: 'assets/qorv/qovinsta6 - Copy.png', title: 'Logo Clearspace Requirements' },
-      { src: 'assets/qorv/qovinsta2 - Copy.png', title: 'Color Palette Architecture' },
-      { src: 'assets/qorv/qovinsta - Copy.png', title: 'Primary Typeface (Google Sans)' },
-      { src: 'assets/qorv/qovinsta3 - Copy.png', title: 'Typography Hierarchy Spec' },
-      { src: 'assets/qorv/qovinsta10.png', title: 'Outdoor Brand Billboards' },
-      { src: 'assets/qorv/qovinsta8.png', title: 'Website Platform UI' },
-      { src: 'assets/qorv/qovinsta9.png', title: 'Brand Mockups & Physical Merch' },
-      { src: 'assets/qorv/qovinsta7.png', title: 'Brand Spatial Imagery' },
-      { src: 'assets/qorv/qovinsta11.png', title: 'Social Media Branding (@qorv_ltd)' },
-      { src: 'assets/qorv/qovinsta12.png', title: 'Social Media Template Matrix' }
+      { src: 'assets/Qorv/qorv-opt.png', title: 'Primary Display: Rim-Lit Silhouette & QORV Mark' },
+      { src: 'assets/Qorv/qorv-opt2.png', title: '3D Glass Ribbon Brand Visual' },
+      { src: 'assets/Qorv/qorv-opt3.png', title: 'Building Businesses That Scale (qorv.org)' },
+      { src: 'assets/Qorv/qorv-opt4.png', title: 'Primary Logo Presentation' },
+      { src: 'assets/Qorv/qorv-opt5.png', title: 'Logomark Palette & Modular Variants' },
+      { src: 'assets/Qorv/qorv-opt6.png', title: 'Logo Clearspace & Safe-Zone Geometry' },
+      { src: 'assets/Qorv/qorv-opt7.png', title: 'Primary Typeface (Google Sans)' },
+      { src: 'assets/Qorv/qorv-opt8.png', title: 'Typography Hierarchy Spec' },
+      { src: 'assets/Qorv/qorv-opt9.png', title: 'Brand Colour Palette Architecture' },
+      { src: 'assets/Qorv/qorv-opt10.png', title: 'Executive Brand Spatial Imagery' },
+      { src: 'assets/Qorv/qorv-opt11.png', title: 'Website Platform UI (qorv.org)' },
+      { src: 'assets/Qorv/qorv-opt12.png', title: 'Physical Mockups & Apparel Merch' },
+      { src: 'assets/Qorv/qorv-opt13.png', title: 'Out-of-Home Brand Billboards' }
     ]
   },
   {
@@ -126,22 +126,25 @@ const caseStudies = [
     category: 'Product & Campaign Architecture · 2025',
     year: '2025',
     pageUrl: 'dmflux.html',
-    mainImage: 'assets/dmflux/dmfluxsoc.png',
-    tagline: '"Understand unique and returning visitors. Track, Analyze, Convert." 3D optical glass bubble mark, platform conversion UI, and widespread transit billboard campaigns.',
-    deliverables: ['3D Optical Glass Emblem', 'Symbol Grid Alignment', 'Auditorium Keynote Billboard', 'Lagos Outdoor Transit Launch', 'Color Palette System', 'Mobile Stories & UI Flow', 'Conversion Social Assets', 'Environmental Mockups'],
+    mainImage: 'assets/Dmflux/dmflux-opt.png',
+    tagline: '"Understand unique and returning visitors. Track, Analyze, Convert." 3D optical glass speech-bubble mark, keynote display architecture, wearable companions, and outdoor transit campaigns.',
+    deliverables: ['3D Optical Glass Emblem', 'Logo Grid Construction', 'Keynote Stage Displays', 'Poppins Typography System', 'Emerald Color Specs', 'Smartwatch & iOS UI', 'City Transit Billboards', 'Physical Apparel & Tote Merch'],
     gallery: [
-      { src: 'assets/dmflux/dmfluxsoc.png', title: 'Main 3D Optical Glass Bubble Mark' },
-      { src: 'assets/dmflux/dmfluxsoc3.png', title: 'Auditorium Stage Billboard Display' },
-      { src: 'assets/dmflux/dmfluxsoc15.png', title: 'Lagos Street Billboard Launch' },
-      { src: 'assets/dmflux/dmfluxsoc2.png', title: 'Logo Grid Construction' },
-      { src: 'assets/dmflux/dmfluxsoc10.png', title: 'Color Palette Specifications' },
-      { src: 'assets/dmflux/dmfluxsoc6.png', title: 'Track · Analyze · Convert' },
-      { src: 'assets/dmflux/dmfluxsoc12.png', title: 'Mobile Experience Story' },
-      { src: 'assets/dmflux/dmfluxsoc16.png', title: 'Transit Billboard Touchpoint' },
-      { src: 'assets/dmflux/dmfluxsoc18.png', title: 'Campaign Receipt Visual' },
-      { src: 'assets/dmflux/dmfluxsoc20.png', title: 'Digital Social Asset' },
-      { src: 'assets/dmflux/dmfluxsoc24.png', title: 'Large Scale Environmental Mockup' },
-      { src: 'assets/dmflux/dmfluxsoc8.png', title: 'Campaign Architecture Suite' }
+      { src: 'assets/Dmflux/dmflux-opt.png', title: 'Main 3D Optical Glass Symbol & Wordmark' },
+      { src: 'assets/Dmflux/dmflux-opt2.png', title: 'Logomark Grid & Proportional Alignment' },
+      { src: 'assets/Dmflux/dmflux-opt3.png', title: 'Keynote Stage Display ("Understand unique & returning visitors")' },
+      { src: 'assets/Dmflux/dmflux-opt4.png', title: 'WhatsApp & Telegram Traffic Keynote' },
+      { src: 'assets/Dmflux/dmflux-opt5.png', title: 'Track · Analyze · Convert Core Visual' },
+      { src: 'assets/Dmflux/dmflux-opt6.png', title: 'Mobile Experience Story ("Leads tracked, while you work.")' },
+      { src: 'assets/Dmflux/dmflux-opt7.png', title: 'Primary Typeface (Poppins)' },
+      { src: 'assets/Dmflux/dmflux-opt8.png', title: 'Color Palette Specifications' },
+      { src: 'assets/Dmflux/dmflux-opt9.png', title: 'Wearable Metrics Companion (Smartwatch UI)' },
+      { src: 'assets/Dmflux/dmflux-opt10.png', title: 'iOS Home Screen App Integration' },
+      { src: 'assets/Dmflux/dmflux-opt11.png', title: 'Branded Merchandise (Beanie & Bottle)' },
+      { src: 'assets/Dmflux/dmflux-opt12.png', title: 'Verified Social Profile (@dmflux.app)' },
+      { src: 'assets/Dmflux/dmflux-opt13.png', title: 'City Transit Campaign Receipt Billboard' },
+      { src: 'assets/Dmflux/dmflux-opt14.png', title: 'Outdoor Transit Shelter Campaign' },
+      { src: 'assets/Dmflux/dmflux-opt15.png', title: 'Brand Tote Merchandise ("Know what\'s working.")' }
     ]
   },
   {
@@ -150,20 +153,23 @@ const caseStudies = [
     category: 'Cloud Infrastructure & Hardware · 2026',
     year: '2025 – 2026',
     pageUrl: 'deploy.html',
-    mainImage: 'assets/Deploy/deploy_sm2.png',
-    tagline: '"Ship your ideas. Not your time." High-luminescence laser green brand system, glowing physical hardware emblems, and streamlined cloud deployment interfaces.',
-    deliverables: ['Primary Brand Mark & Slogan', 'App Icon & Fluid Waveform', 'Laser Green Palette Architecture', 'Physical Glowing Hardware Device', 'Performance Metric Badges', 'Spatial Brand Visuals', 'Developer Portal UI', 'Social Marketing Suite'],
+    mainImage: 'assets/Deploy/deploy-opt2.png',
+    tagline: '"Ship your ideas. Not your time." High-luminescence laser green brand system, glowing glass hardware emblems, Space Grotesk typography, and streamlined wearable/developer UI.',
+    deliverables: ['Primary Brand Mark & Slogan', 'App Icon & Fluted Waveform', 'Laser Green Palette Architecture', 'Space Grotesk Font Spec', 'Glowing Glass Hardware Emblem', 'Apple Watch & iOS UI', 'Developer Swag & Pins', 'Physical Apparel'],
     gallery: [
-      { src: 'assets/Deploy/deploy_sm2.png', title: 'Primary Brand Mark ("Ship your ideas. Not your time.")' },
-      { src: 'assets/Deploy/deploy_sm.png', title: 'App Icon & Fluid Vertical Waveform' },
-      { src: 'assets/Deploy/deploy_sm4.png', title: 'Glowing Physical Device in Hand' },
-      { src: 'assets/Deploy/deploy_sm3.png', title: 'Color Palette Architecture' },
-      { src: 'assets/Deploy/deploy_sm15.png', title: 'Performance Metrics Badges' },
-      { src: 'assets/Deploy/deploy_sm6.png', title: 'Cybernetic Spatial Visual' },
-      { src: 'assets/Deploy/deploy_sm13.png', title: 'Developer Portal Architecture' },
-      { src: 'assets/Deploy/deploy_sm9.png', title: 'Product Interface Spec' },
-      { src: 'assets/Deploy/deploy_sm10.png', title: 'Social Marketing Display' },
-      { src: 'assets/Deploy/deploy_sm12.png', title: 'Social Grid Suite' }
+      { src: 'assets/Deploy/deploy-opt2.png', title: 'Primary Brand Mark ("Ship your ideas. Not your time.")' },
+      { src: 'assets/Deploy/deploy-opt.png', title: 'App Icon & Fluted Laser Green Waveform' },
+      { src: 'assets/Deploy/deploy-opt4.png', title: 'Glowing Glass Emblem Hardware in Hand' },
+      { src: 'assets/Deploy/deploy-opt3.png', title: 'Laser Green Palette Architecture' },
+      { src: 'assets/Deploy/deploy-opt6.png', title: 'Primary Typography Specification (Space Grotesk)' },
+      { src: 'assets/Deploy/deploy-opt5.png', title: 'Physical Apparel ("DEPLOY — SHIP WITH LIGHT SPEED")' },
+      { src: 'assets/Deploy/deploy-opt7.png', title: 'App Ecosystem Placement' },
+      { src: 'assets/Deploy/deploy-opt8.png', title: 'iOS Home Screen Integration' },
+      { src: 'assets/Deploy/deploy-opt9.png', title: 'Apple Watch Deployment Status UI' },
+      { src: 'assets/Deploy/deploy-opt10.png', title: 'Performance Display ("5x faster deployment")' },
+      { src: 'assets/Deploy/deploy-opt13.png', title: 'Developer Enamel Pin Badges' },
+      { src: 'assets/Deploy/deploy-opt14.png', title: 'Developer Workstation Stickers' },
+      { src: 'assets/Deploy/deploy-opt15.png', title: 'Spatial Mineral Brand Texture' }
     ]
   },
   {
@@ -172,33 +178,33 @@ const caseStudies = [
     category: 'High-Impact Social Systems · 2024–2026',
     year: '2024 – 2026',
     pageUrl: 'social-media-designs.html',
-    mainImage: 'assets/Social media designs/qorv smds.png',
-    tagline: '"Stop chasing customers. Build demand instead." Strategic high-conversion carousels, 3D futuristic product visuals, key announcement graphics, and systematic social media frameworks.',
+    mainImage: 'assets/Social media designs/smd-opt3.png',
+    tagline: '"Stop chasing customers. Build demand instead." Strategic high-conversion creatives, 3D futuristic AI announcements, QORV x TAS collaborations, and Dmflux performance marketing assets.',
     deliverables: [
-      '3D Futuristic Key Visuals',
-      'AI & Tech Launch Drops',
-      'Project Amplify Carousels',
-      'LinkedIn & IG Leadership Slides',
-      'Conversion Receipt Visuals',
-      'Visitor Intelligence Assets',
-      'Performance Metric Graphics',
-      'Growth & Engagement Creatives'
+      '3D Futuristic AI Visuals',
+      'QORV 3D Growth Graphics',
+      'Project Amplify (QORV x TAS)',
+      'Digital Authority Creatives',
+      'WhatsApp Influencer Drops',
+      '3D Trophy & Reward Campaigns',
+      'E-Book Launch Visuals',
+      'High-Conversion Flyers'
     ],
     gallery: [
-      { src: 'assets/Social media designs/qorv smds.png', title: 'Main Display: 3D Growth Architecture' },
-      { src: 'assets/Social media designs/CHATATP7.png', title: 'ChatATP: Studio is LIVE (Cyborg Astronaut)' },
-      { src: 'assets/Social media designs/CHATATP8.png', title: 'ChatATP: A New Season To Build Smarter' },
-      { src: 'assets/Social media designs/CHATATP9.png', title: 'Gurulabs is Cooking! (Bionic Lab Visual)' },
-      { src: 'assets/Social media designs/qorv carousel 11.png', title: 'Project Amplify: QORV x TAS Strategic Alliance' },
-      { src: 'assets/Social media designs/qorv carousel 12.png', title: 'QORV Value Proposition & Scale Slide' },
-      { src: 'assets/Social media designs/qorv carousel 13 [3].png', title: 'QORV Call-to-Scale Slide' },
-      { src: 'assets/Social media designs/dmfluxsoc18.png', title: 'Dmflux Campaign Receipt Graphic' },
-      { src: 'assets/Social media designs/dmfluxsoc19.png', title: 'Dmflux Conversion UI & Analytics' },
-      { src: 'assets/Social media designs/dmfluxsoc20.png', title: 'Dmflux Visitor Intelligence Spec' },
-      { src: 'assets/Social media designs/dmfluxsoc22.png', title: 'Dmflux Performance Metric Graphic' },
-      { src: 'assets/Social media designs/dmfluxsoc23.png', title: 'Dmflux Product Experience Graphic' },
-      { src: 'assets/Social media designs/dmfluxsoc25.png', title: 'Dmflux Brand Value Statement' },
-      { src: 'assets/Social media designs/dmfluxsoc26.png', title: 'Dmflux Growth & Engagement Creative' }
+      { src: 'assets/Social media designs/smd-opt3.png', title: 'QORV 3D Glass Growth Graphic ("Build demand instead")' },
+      { src: 'assets/Social media designs/smd-opt10.png', title: 'ChatATP Studio is LIVE (Cyborg Astronaut)' },
+      { src: 'assets/Social media designs/smd-opt13.png', title: 'ChatATP: A New Season To Build Smarter' },
+      { src: 'assets/Social media designs/smd-opt12.png', title: 'Gurulabs is Cooking! (Bionic Lab Visual)' },
+      { src: 'assets/Social media designs/smd-opt2.png', title: 'Project Amplify: QORV x TAS Bionic Fist Bump' },
+      { src: 'assets/Social media designs/smd-opt9.png', title: 'QORV x TAS ("Two strengths, One shared goal.")' },
+      { src: 'assets/Social media designs/smd-opt7.png', title: 'QORV Digital Authority ("They\'ll look you up.")' },
+      { src: 'assets/Social media designs/smd-opt.png', title: 'Dmflux 3 Free E-Books Drop' },
+      { src: 'assets/Social media designs/smd-opt4.png', title: 'Dmflux WhatsApp Influencer Pro Launch' },
+      { src: 'assets/Social media designs/smd-opt5.png', title: 'Dmflux Audience Opportunity Asset' },
+      { src: 'assets/Social media designs/smd-opt6.png', title: 'Dmflux Tournament Guide Card' },
+      { src: 'assets/Social media designs/smd-opt8.png', title: 'Dmflux ₦200,000 Reward Pool Display' },
+      { src: 'assets/Social media designs/smd-opt11.png', title: 'Dmflux 2027 WhatsApp Influencer Programme Flyer' },
+      { src: 'assets/Social media designs/smd-opt14.png', title: 'Dmflux ProofOverHype 3D Glass Trophy' }
     ]
   }
 ];
@@ -383,10 +389,66 @@ function initContactForm() {
 }
 
 // ==========================================================================
+// 6. 4-PART LAYERED SCROLL SHOWCASE (SLIDE-UP LAYERS ON SCROLL)
+// ==========================================================================
+function initScrollLayerGrid() {
+  const slots = document.querySelectorAll('.scroll-layer-slot');
+  if (!slots.length) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  let ticking = false;
+
+  function updateLayers() {
+    ticking = false;
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+
+    slots.forEach((slot) => {
+      const rect = slot.getBoundingClientRect();
+      const slotIndex = parseInt(slot.getAttribute('data-slot-index') || '0', 10);
+      const stagger = slotIndex * 0.035;
+
+      // Normalize progress [0..1] as the card moves from bottom 90% to top 8% of viewport
+      const raw = (vh * 0.90 - rect.top) / (vh * 0.82);
+      const progress = Math.max(0, Math.min(1, raw));
+
+      const layer2 = slot.querySelector('.scroll-layer-slide[data-layer="2"]');
+      const layer3 = slot.querySelector('.scroll-layer-slide[data-layer="3"]');
+
+      if (layer2) {
+        const p2 = Math.max(0, Math.min(1, (progress - (0.08 + stagger)) / 0.34));
+        const y2 = (1 - p2) * 100;
+        layer2.style.transform = `translate3d(0, ${y2.toFixed(2)}%, 0)`;
+      }
+
+      if (layer3) {
+        const p3 = Math.max(0, Math.min(1, (progress - (0.48 + stagger)) / 0.34));
+        const y3 = (1 - p3) * 100;
+        layer3.style.transform = `translate3d(0, ${y3.toFixed(2)}%, 0)`;
+      }
+    });
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(updateLayers);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  updateLayers();
+}
+
+// ==========================================================================
 // INITIALIZATION
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   initTextPullUp();
+  initScrollLayerGrid();
   initContactDuds();
   initProjectModal();
   initCustomCursor();
