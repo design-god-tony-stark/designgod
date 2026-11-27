@@ -307,21 +307,77 @@ function initCustomCursor() {
 }
 
 // ==========================================================================
-// 5. INQUIRY FORM FEEDBACK
+// 5. INQUIRY FORM FORMSPREE INTEGRATION
 // ==========================================================================
 function initContactForm() {
   const form = document.getElementById('transmission-form');
   const successNotice = document.getElementById('transmission-success');
+  const errorNotice = document.getElementById('transmission-error');
+  const submitBtn = document.getElementById('form-submit-btn');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (successNotice) {
-      successNotice.classList.remove('hidden');
-      form.reset();
-      setTimeout(() => {
-        successNotice.classList.add('hidden');
-      }, 5000);
+
+    const originalBtnText = submitBtn ? submitBtn.textContent : 'Send Inquiry →';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.classList.add('opacity-75');
+    }
+
+    if (errorNotice) errorNotice.classList.add('hidden');
+    if (successNotice) successNotice.classList.add('hidden');
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action || 'https://formspree.io/f/xwlozrld', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        if (successNotice) {
+          successNotice.classList.remove('hidden');
+        }
+        form.reset();
+        if (submitBtn) {
+          submitBtn.textContent = 'Sent ✓';
+          setTimeout(() => {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-75');
+          }, 4000);
+        }
+      } else {
+        const data = await response.json().catch(() => ({}));
+        if (errorNotice) {
+          if (data && data.errors && data.errors.length > 0) {
+            errorNotice.textContent = data.errors.map(err => err.message).join(', ');
+          } else {
+            errorNotice.textContent = 'Unable to submit inquiry. Please reach out directly on WhatsApp or Email.';
+          }
+          errorNotice.classList.remove('hidden');
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+          submitBtn.classList.remove('opacity-75');
+        }
+      }
+    } catch (err) {
+      if (errorNotice) {
+        errorNotice.textContent = 'Unable to submit inquiry. Please reach out directly on WhatsApp or Email.';
+        errorNotice.classList.remove('hidden');
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        submitBtn.classList.remove('opacity-75');
+      }
     }
   });
 }

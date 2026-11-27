@@ -9,10 +9,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50' y='64' fill='%23FFF' font-family='sans-serif' font-weight='700' font-size='44' text-anchor='middle'>PH</text></svg>">
 
-  <!-- Google Font: Space Grotesk exclusively -->
+  <!-- Google Fonts: Plus Jakarta Sans (Titles) & Space Grotesk (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +21,12 @@
       theme: {
         extend: {
           fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
             sans: ['"Space Grotesk"', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace'],
           },
           letterSpacing: {
-            'tightest': '-1px',
+            'tightest': '-2px',
           }
         }
       }
@@ -35,7 +36,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#000000] text-[#FFFFFF] font-sans antialiased selection:bg-white selection:text-black">
+<body class="text-[#FFFFFF] font-sans antialiased selection:bg-[#FFBFBF] selection:text-black">
 
   <!-- Subtle custom cursor dot -->
   <div class="custom-cursor"></div>
@@ -48,7 +49,7 @@
       
       <!-- Monogram & Name -->
       <a href="#" class="flex items-center gap-3">
-        <span class="font-bold text-sm tracking-neg-1 text-white uppercase">Peter Hephzibah</span>
+        <span class="font-bold text-sm tracking-neg-1px text-white">PH - Brand Designer</span>
       </a>
 
       <!-- Minimal Navigation Links -->
@@ -67,22 +68,29 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION — CENTERED, SPACE GROTESK, TEXT PULL-UP ANIMATION
+       HERO SECTION — CENTERED, PLUS JAKARTA SANS TITLES, FRACTAL GLASS + RED GLOW
        ========================================================================== -->
-  <main>
-    <section class="min-h-[85vh] pt-36 pb-20 px-6 flex flex-col items-center justify-center text-center relative hero-pull-up-group max-w-4xl mx-auto">
+  <main class="relative">
+    <!-- Fractal Glass + Red Glow Backdrop behind the Header / Hero Section -->
+    <div class="hero-fractal-backdrop" aria-hidden="true">
+      <div class="hero-red-glow"></div>
+      <div class="hero-fractal-flutes"></div>
+      <div class="hero-fractal-prism"></div>
+    </div>
+
+    <section class="min-h-[85vh] pt-36 pb-24 px-6 flex flex-col items-center justify-center text-center relative z-10 hero-pull-up-group max-w-4xl mx-auto">
       
-      <!-- Avatar Icon & Intro ('hi i'm peter') -->
+      <!-- Avatar Icon & Intro ('Hi, I'm Peter') -->
       <div class="pull-up-mask mb-6">
-        <div class="pull-up-text flex flex-col items-center gap-2.5">
-          <img src="assets/icons/mypic.png" alt="Peter" class="w-[30px] h-[30px] object-cover rounded-full border border-zinc-700/80 shadow-sm">
-          <span class="text-sm sm:text-[15px] text-zinc-400 font-normal tracking-normal lowercase">hi i'm peter</span>
+        <div class="pull-up-text flex flex-col items-center gap-3">
+          <img src="assets/icons/mypic.png" alt="Peter Hephzibah" class="w-[70px] h-[70px] object-cover rounded-full border-2 border-zinc-700/80 shadow-lg">
+          <span class="text-sm sm:text-base text-white font-normal tracking-normal">Hi, I'm Peter</span>
         </div>
       </div>
 
       <!-- Main Headline -->
       <div class="pull-up-mask">
-        <h1 class="pull-up-text delay-100 font-bold text-3xl sm:text-5xl md:text-6xl text-white tracking-neg-1 leading-[1.14]">
+        <h1 class="pull-up-text delay-100 font-bold text-3xl sm:text-5xl md:text-6xl text-white tracking-neg-1 leading-[1.18] pb-2">
           I build brands <br> through strategic <br> visual storytelling
         </h1>
       </div>
@@ -134,7 +142,7 @@
           <div>
             <!-- Main Logo Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="qorv">
-              <img src="assets/qorv/qovinsta13.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/qorv/qorv.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Logo
               </span>
@@ -144,9 +152,9 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Brand System · 2026</span>
-                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">QORV</h3>
+                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">QORV</h3>
               </div>
-              <a href="qorv.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+              <a href="qorv.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
               </a>
             </div>
@@ -157,7 +165,7 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
-            <button data-project-id="qorv" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+            <button data-project-id="qorv" class="text-xs text-zinc-300 hover:text-[#FFBFBF] font-medium flex items-center gap-1">
               <span>Quick View Gallery</span>
               <span>↓</span>
             </button>
@@ -181,9 +189,9 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Product & Campaign · 2025</span>
-                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Dmflux</h3>
+                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Dmflux</h3>
               </div>
-              <a href="dmflux.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+              <a href="dmflux.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
               </a>
             </div>
@@ -194,7 +202,7 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
-            <button data-project-id="dmflux" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+            <button data-project-id="dmflux" class="text-xs text-zinc-300 hover:text-[#FFBFBF] font-medium flex items-center gap-1">
               <span>Quick View Gallery</span>
               <span>↓</span>
             </button>
@@ -218,9 +226,9 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Cloud Infrastructure · 2026</span>
-                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Deploy</h3>
+                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Deploy</h3>
               </div>
-              <a href="deploy.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+              <a href="deploy.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
               </a>
             </div>
@@ -231,7 +239,7 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
-            <button data-project-id="deploy" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+            <button data-project-id="deploy" class="text-xs text-zinc-300 hover:text-[#FFBFBF] font-medium flex items-center gap-1">
               <span>Quick View Gallery</span>
               <span>↓</span>
             </button>
@@ -255,9 +263,9 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">High-Impact Systems · 2024–2026</span>
-                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1">Social media designs</h3>
+                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Social media designs</h3>
               </div>
-              <a href="social-media-designs.html" class="text-xs text-zinc-400 hover:text-white p-1 transition-colors" title="Open Case Study">
+              <a href="social-media-designs.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
               </a>
             </div>
@@ -268,7 +276,7 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
-            <button data-project-id="social-media-designs" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+            <button data-project-id="social-media-designs" class="text-xs text-zinc-300 hover:text-[#FFBFBF] font-medium flex items-center gap-1">
               <span>Quick View Gallery</span>
               <span>↓</span>
             </button>
@@ -297,7 +305,7 @@
         
         <div class="scroll-reveal reveal-delay-1">
           <span class="text-xs font-mono text-zinc-500">2019 — 2021</span>
-          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Foundational Systems</h3>
+          <h3 class="font-bold text-lg text-[#FFBFBF] mt-2 tracking-neg-1">Foundational Systems</h3>
           <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
             Swiss grid disciplines, corporate identity architecture, and custom letterform development for early-stage ventures.
           </p>
@@ -305,7 +313,7 @@
 
         <div class="scroll-reveal reveal-delay-2">
           <span class="text-xs font-mono text-zinc-500">2021 — 2024</span>
-          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Scale & Luxury</h3>
+          <h3 class="font-bold text-lg text-[#FFBFBF] mt-2 tracking-neg-1">Scale & Luxury</h3>
           <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
             Expanding into luxury packaging, international tech identity systems, and institutional brand strategy.
           </p>
@@ -313,7 +321,7 @@
 
         <div class="scroll-reveal reveal-delay-3">
           <span class="text-xs font-mono text-zinc-500">2024 — Present</span>
-          <h3 class="font-bold text-lg text-white mt-2 tracking-neg-1">Comprehensive Direction</h3>
+          <h3 class="font-bold text-lg text-[#FFBFBF] mt-2 tracking-neg-1">Comprehensive Direction</h3>
           <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
             Directing end-to-end brand worlds, variable typography systems, and tactile physical collateral.
           </p>
@@ -325,19 +333,19 @@
       <div class="mt-16 pt-8 border-t border-zinc-900 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs scroll-reveal reveal-delay-2">
         <div>
           <span class="text-zinc-600 block mb-1">01</span>
-          <span class="text-white font-medium block">Brand Architecture</span>
+          <span class="text-[#FFBFBF] font-medium block">Brand Architecture</span>
         </div>
         <div>
           <span class="text-zinc-600 block mb-1">02</span>
-          <span class="text-white font-medium block">Custom Typography</span>
+          <span class="text-[#FFBFBF] font-medium block">Custom Typography</span>
         </div>
         <div>
           <span class="text-zinc-600 block mb-1">03</span>
-          <span class="text-white font-medium block">Visual Identity Systems</span>
+          <span class="text-[#FFBFBF] font-medium block">Visual Identity Systems</span>
         </div>
         <div>
           <span class="text-zinc-600 block mb-1">04</span>
-          <span class="text-white font-medium block">Environmental & Packaging</span>
+          <span class="text-[#FFBFBF] font-medium block">Environmental & Packaging</span>
         </div>
       </div>
 
@@ -350,7 +358,7 @@
       
       <div class="scroll-reveal">
         <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-2">03 / Contact</span>
-        <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-neg-1">
+        <h2 class="font-bold text-3xl sm:text-4xl md:text-5xl text-[#FFBFBF] tracking-neg-1">
           Let's work together.
         </h2>
         <p class="text-xs sm:text-sm text-zinc-400 mt-3 max-w-md mx-auto font-light">
@@ -358,91 +366,117 @@
         </p>
       </div>
 
-      <!-- Contact Duds (Glass Accent Buttons) -->
+      <!-- Official Contact & Social Media Links -->
       <div class="mt-10 flex flex-wrap items-center justify-center gap-3 scroll-reveal reveal-delay-1">
 
-        <!-- CONTACT DUD: LINKEDIN -->
-        <a href="#" 
-           data-dud="true" 
-           data-platform="LinkedIn"
-           data-sample="https://linkedin.com/in/peterhephzibah"
-           class="glass-btn text-xs py-2 px-4"
-           title="Contact Dud: Replace with your LinkedIn URL">
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/in/peter-hephzibah-5318542b3?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="glass-btn text-xs py-2 px-4 flex items-center gap-1.5"
+           title="Peter Hephzibah on LinkedIn">
           <span>LinkedIn</span>
-          <span class="dud-tag">Dud</span>
+          <span class="text-zinc-500 text-[10px]">↗</span>
         </a>
 
-        <!-- CONTACT DUD: BEHANCE -->
-        <a href="#" 
-           data-dud="true" 
-           data-platform="Behance"
-           data-sample="https://behance.net/peterhephzibah"
-           class="glass-btn text-xs py-2 px-4"
-           title="Contact Dud: Replace with your Behance URL">
+        <!-- BEHANCE -->
+        <a href="https://www.behance.net/peterhephzib" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="glass-btn text-xs py-2 px-4 flex items-center gap-1.5"
+           title="Peter Hephzibah on Behance">
           <span>Behance</span>
-          <span class="dud-tag">Dud</span>
+          <span class="text-zinc-500 text-[10px]">↗</span>
         </a>
 
-        <!-- CONTACT DUD: X (TWITTER) -->
-        <a href="#" 
-           data-dud="true" 
-           data-platform="X (Twitter)"
-           data-sample="https://x.com/peterhephzibah"
-           class="glass-btn text-xs py-2 px-4"
-           title="Contact Dud: Replace with your X URL">
+        <!-- X (TWITTER) -->
+        <a href="https://x.com/godof_design" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="glass-btn text-xs py-2 px-4 flex items-center gap-1.5"
+           title="Peter Hephzibah (@godof_design) on X">
           <span>X / Twitter</span>
-          <span class="dud-tag">Dud</span>
+          <span class="text-zinc-500 text-[10px]">↗</span>
         </a>
 
-        <!-- CONTACT DUD: WHATSAPP -->
-        <a href="#" 
-           data-dud="true" 
-           data-platform="WhatsApp"
-           data-sample="https://wa.me/2349134308318"
-           class="glass-btn text-xs py-2 px-4"
-           title="Contact Dud: Replace with your WhatsApp URL">
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/the_brand_idol?lqvp=MTdiZjV6MTZtMDF2NA==" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="glass-btn text-xs py-2 px-4 flex items-center gap-1.5"
+           title="Peter Hephzibah (@the_brand_idol) on Instagram">
+          <span>Instagram</span>
+          <span class="text-zinc-500 text-[10px]">↗</span>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/2348139730828" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="glass-btn text-xs py-2 px-4 flex items-center gap-1.5"
+           title="Chat with Peter Hephzibah on WhatsApp">
           <span>WhatsApp</span>
-          <span class="dud-tag">Dud</span>
+          <span class="text-zinc-500 text-[10px]">↗</span>
         </a>
 
       </div>
 
-      <!-- Clean Minimal Inquiry Form -->
+      <!-- Clean Minimal Inquiry Form (Formspree Integrated) -->
       <div class="mt-12 p-8 rounded-2xl bg-[#080808] border border-zinc-800 text-left max-w-xl mx-auto scroll-reveal reveal-delay-2">
-        <form id="transmission-form" class="space-y-4">
+        <form id="transmission-form" action="https://formspree.io/f/xwlozrld" method="POST" class="space-y-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs text-zinc-400 mb-1">Your Name</label>
-              <input type="text" required placeholder="Name" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
+              <input type="text" name="name" required placeholder="Name" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
             </div>
             <div>
               <label class="block text-xs text-zinc-400 mb-1">Contact Email</label>
-              <input type="email" required placeholder="name@domain.com" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
+              <input type="email" name="email" required placeholder="name@domain.com" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans">
+            </div>
+          </div>
+
+          <!-- Project Scope & Estimated Budget -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs text-zinc-400 mb-1">Project Scope</label>
+              <select name="project_scope" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white focus:outline-none focus:border-white transition-colors text-xs font-sans">
+                <option value="Visual Identity System">Visual Identity System</option>
+                <option value="Custom Typography & Letterforms">Custom Typography & Letterforms</option>
+                <option value="Social Media Systems & 3D Visuals">Social Media Systems & 3D Visuals</option>
+                <option value="Packaging & Environmental">Packaging & Environmental</option>
+                <option value="Complete Brand Direction & Rebrand">Complete Brand Direction & Rebrand</option>
+                <option value="Design Advisory">Design Advisory</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs text-zinc-400 mb-1">Estimated Budget</label>
+              <select name="budget" class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white focus:outline-none focus:border-white transition-colors text-xs font-sans">
+                <option value="$300 – $750">$300 – $750</option>
+                <option value="$750 – $1,500">$750 – $1,500</option>
+                <option value="$1,500 – $3,000">$1,500 – $3,000</option>
+                <option value="$3,000 – $6,000">$3,000 – $6,000</option>
+                <option value="$6,000+">$6,000+</option>
+                <option value="Flexible / Custom Scope">Flexible / Custom Scope</option>
+              </select>
             </div>
           </div>
 
           <div>
-            <label class="block text-xs text-zinc-400 mb-1">Project Scope</label>
-            <select class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white focus:outline-none focus:border-white transition-colors text-xs font-sans">
-              <option>Visual Identity System</option>
-              <option>Bespoke Typography & Letterforms</option>
-              <option>Packaging & Environmental</option>
-              <option>Brand Advisory</option>
-            </select>
+            <label class="block text-xs text-zinc-400 mb-1">Project Details & Timeline</label>
+            <textarea name="message" rows="3" required placeholder="Brief project details, timeline, and goals..." class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans"></textarea>
           </div>
 
-          <div>
-            <label class="block text-xs text-zinc-400 mb-1">Message</label>
-            <textarea rows="3" placeholder="Brief project details..." class="w-full px-3 py-2 rounded-lg bg-black border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors text-xs font-sans"></textarea>
-          </div>
-
-          <button type="submit" class="w-full py-2.5 rounded-lg bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors">
+          <button type="submit" id="form-submit-btn" class="w-full py-2.5 rounded-lg bg-[#FFBFBF] text-[#140205] text-xs font-bold uppercase tracking-wider hover:bg-white transition-colors cursor-pointer">
             Send Inquiry →
           </button>
         </form>
 
-        <div id="transmission-success" class="hidden mt-4 p-3 rounded-lg bg-zinc-900 border border-zinc-700 text-white text-xs text-center">
-          Inquiry sent. Peter will respond within 24 hours.
+        <div id="transmission-success" class="hidden mt-4 p-3 rounded-lg bg-zinc-900 border border-zinc-700 text-white text-xs text-center font-mono">
+          ✓ Inquiry sent. Peter will respond within 24 hours.
+        </div>
+
+        <div id="transmission-error" class="hidden mt-4 p-3 rounded-lg bg-red-950/60 border border-red-800 text-red-200 text-xs text-center font-mono">
+          Unable to submit inquiry. Please reach out directly on WhatsApp or Email.
         </div>
       </div>
 
@@ -491,7 +525,7 @@
 
       <!-- Category & Header -->
       <span id="modal-category" class="text-xs text-zinc-500 uppercase tracking-wider">Category</span>
-      <h2 id="modal-title" class="font-bold text-3xl md:text-4xl text-white mt-1 tracking-neg-1">Title</h2>
+      <h2 id="modal-title" class="font-bold text-3xl md:text-4xl text-[#FFBFBF] mt-1 tracking-neg-1">Title</h2>
       
       <div class="flex items-center gap-3 mt-2 text-xs text-zinc-500">
         <span id="modal-year">2026</span>
@@ -514,7 +548,7 @@
       <!-- Gallery Grid of Portfolio Images -->
       <div class="mt-8 pt-6 border-t border-zinc-900">
         <div class="flex items-center justify-between mb-4">
-          <h4 class="text-xs uppercase tracking-wider text-white font-bold">// Portfolio Images & Brand Assets</h4>
+          <h4 class="text-xs uppercase tracking-wider text-[#FFBFBF] font-bold">// Portfolio Images & Brand Assets</h4>
           <span class="text-[11px] text-zinc-500">Click any image to enlarge</span>
         </div>
         <div id="modal-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
