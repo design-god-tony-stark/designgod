@@ -83,7 +83,10 @@
       <!-- Avatar Icon & Intro ('Hi, I'm Peter') -->
       <div class="pull-up-mask mb-6">
         <div class="pull-up-text flex flex-col items-center gap-3">
-          <img src="assets/icons/mypic.png" alt="Peter Hephzibah" class="w-[70px] h-[70px] object-cover rounded-full border-2 border-zinc-700/80 shadow-lg">
+          <div class="w-[70px] h-[70px] rounded-full border-2 border-zinc-700/80 shadow-lg bg-[#1c0408] flex items-center justify-center overflow-hidden">
+            <img src="assets/icons/mypic.png?v=2" alt="Peter Hephzibah" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+            <span class="hidden text-lg font-bold tracking-neg-1 text-white">PH</span>
+          </div>
           <span class="text-sm sm:text-base text-white font-normal tracking-normal">Hi, I'm Peter</span>
         </div>
       </div>
@@ -122,7 +125,7 @@
          ========================================================================== -->
     <section id="work" class="py-24 px-6 md:px-12 max-w-6xl mx-auto border-t border-zinc-900">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-4 border-b border-zinc-900 scroll-reveal">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-zinc-900 scroll-reveal">
         <div>
           <span class="text-xs uppercase tracking-wider text-zinc-500 block mb-1">01 / Index</span>
           <h2 class="font-bold text-3xl md:text-4xl text-white tracking-neg-1">
@@ -134,15 +137,52 @@
         </p>
       </div>
 
+      <!-- 4-Part Layered Scroll Showcase (12 Assets Grouped 1-3, 4-6, 7-9, 10-12) -->
+      <div id="scroll-layer-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16 scroll-reveal">
+
+        <!-- Part 1: Images 1-3 -->
+        <div class="scroll-layer-slot relative aspect-square rounded-2xl overflow-hidden bg-[#0a0204] shadow-xl" data-slot-index="0">
+          <img src="assets/Scroll/mockup-opt.png" alt="Archive Showcase 01" class="scroll-layer-img is-base">
+          <img src="assets/Scroll/mockup-opt2.png" alt="Archive Showcase 02" class="scroll-layer-img scroll-layer-slide" data-layer="2">
+          <img src="assets/Scroll/mockup-opt3.png" alt="Archive Showcase 03" class="scroll-layer-img scroll-layer-slide" data-layer="3">
+          <span class="scroll-layer-badge">01</span>
+        </div>
+
+        <!-- Part 2: Images 4, 5, 10 -->
+        <div class="scroll-layer-slot relative aspect-square rounded-2xl overflow-hidden bg-[#0a0204] shadow-xl" data-slot-index="1">
+          <img src="assets/Scroll/mockup-opt4.png" alt="Archive Showcase 04" class="scroll-layer-img is-base">
+          <img src="assets/Scroll/mockup-opt5.png" alt="Archive Showcase 05" class="scroll-layer-img scroll-layer-slide" data-layer="2">
+          <img src="assets/Scroll/mockup-opt10.png" alt="Archive Showcase 10" class="scroll-layer-img scroll-layer-slide" data-layer="3">
+          <span class="scroll-layer-badge">02</span>
+        </div>
+
+        <!-- Part 3: Images 7-9 -->
+        <div class="scroll-layer-slot relative aspect-square rounded-2xl overflow-hidden bg-[#0a0204] shadow-xl" data-slot-index="2">
+          <img src="assets/Scroll/mockup-opt7.png" alt="Archive Showcase 07" class="scroll-layer-img is-base">
+          <img src="assets/Scroll/mockup-opt8.png" alt="Archive Showcase 08" class="scroll-layer-img scroll-layer-slide" data-layer="2">
+          <img src="assets/Scroll/mockup-opt9.png" alt="Archive Showcase 09" class="scroll-layer-img scroll-layer-slide" data-layer="3">
+          <span class="scroll-layer-badge">03</span>
+        </div>
+
+        <!-- Part 4: Images 11, 6, 12 -->
+        <div class="scroll-layer-slot relative aspect-square rounded-2xl overflow-hidden bg-[#0a0204] shadow-xl" data-slot-index="3">
+          <img src="assets/Scroll/mockup-opt11.png" alt="Archive Showcase 11" class="scroll-layer-img is-base">
+          <img src="assets/Scroll/mockup-opt6.png" alt="Archive Showcase 06" class="scroll-layer-img scroll-layer-slide" data-layer="2">
+          <img src="assets/Scroll/mockup-opt12.png" alt="Archive Showcase 12" class="scroll-layer-img scroll-layer-slide" data-layer="3">
+          <span class="scroll-layer-badge">04</span>
+        </div>
+
+      </div>
+
       <!-- Projects Grid (2x2 Balanced Layout) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Project 1: QORV (korv) -->
+        <!-- Project 1: QORV -->
         <article class="minimal-card p-6 flex flex-col justify-between group scroll-reveal reveal-delay-1">
           <div>
             <!-- Main Logo Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="qorv">
-              <img src="assets/qorv/qorv.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/Qorv/qorv-opt.png" alt="QORV Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Logo
               </span>
@@ -152,7 +192,7 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Brand System · 2026</span>
-                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">QORV</h3>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1px">QORV</h3>
               </div>
               <a href="qorv.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
@@ -160,7 +200,7 @@
             </div>
 
             <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-              Complete brand identity system, Google Sans typographic hierarchy, outdoor billboard infrastructure, and executive digital presence.
+              Complete brand identity system, Google Sans typographic hierarchy, outdoor billboard infrastructure, motion reels, and executive digital presence.
             </p>
           </div>
 
@@ -180,7 +220,7 @@
           <div>
             <!-- Main Logo Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="dmflux">
-              <img src="assets/dmflux/dmfluxsoc.png" alt="Dmflux Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/Dmflux/dmflux-opt.png" alt="Dmflux Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Logo
               </span>
@@ -189,7 +229,7 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Product & Campaign · 2025</span>
-                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Dmflux</h3>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1px">Dmflux</h3>
               </div>
               <a href="dmflux.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
@@ -197,7 +237,7 @@
             </div>
 
             <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-              3D glass optical symbol, visitor analytics platform design, comprehensive Lagos transit billboard campaign, and mobile story templates.
+              Analytics identity grid, keynote display architecture, smartwatch & iOS app touchpoints, transit billboards, and physical merchandise.
             </p>
           </div>
 
@@ -217,7 +257,7 @@
           <div>
             <!-- Main Logo Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="deploy">
-              <img src="assets/Deploy/deploy_sm2.png" alt="Deploy Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/Deploy/deploy-opt2.png" alt="Deploy Primary Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Logo
               </span>
@@ -226,7 +266,7 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">Cloud Infrastructure · 2026</span>
-                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Deploy</h3>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1px">Deploy</h3>
               </div>
               <a href="deploy.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
@@ -234,7 +274,7 @@
             </div>
 
             <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-              High-luminescence cyberpunk visual system, laser green palette specs, physical smart hardware emblem, and fast developer metrics portal.
+              High-luminescence laser green visual system, Space Grotesk typography specs, glass hardware emblem, wearable UI, and developer swag.
             </p>
           </div>
 
@@ -254,7 +294,7 @@
           <div>
             <!-- Main Display -->
             <div class="relative h-64 rounded-xl overflow-hidden bg-[#050505] border border-zinc-800 mb-6 group-hover:border-zinc-600 transition-colors cursor-pointer" data-project-id="social-media-designs">
-              <img src="assets/Social media designs/qorv smds.png" alt="Social Media Designs Display" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <img src="assets/Social media designs/smd-opt3.png" alt="Social Media Designs Display" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/75 border border-white/20 text-zinc-300">
                 Main Display
               </span>
@@ -263,7 +303,7 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="text-[11px] text-zinc-500 uppercase tracking-wider block">High-Impact Systems · 2024–2026</span>
-                <h3 class="font-bold text-xl text-[#FFBFBF] mt-1 tracking-neg-1">Social media designs</h3>
+                <h3 class="font-bold text-xl text-white mt-1 tracking-neg-1px">Social media designs</h3>
               </div>
               <a href="social-media-designs.html" class="text-xs text-zinc-400 hover:text-[#FFBFBF] p-1 transition-colors" title="Open Case Study">
                 ↗
@@ -271,7 +311,7 @@
             </div>
 
             <p class="text-xs text-zinc-400 mt-2 font-light leading-relaxed">
-              Strategic high-converting social carousels, 3D futuristic campaign visuals, tech announcements, and systematic digital design frameworks.
+              Strategic high-converting social creatives, 3D futuristic AI announcements, QORV x TAS campaigns, and Dmflux performance graphics.
             </p>
           </div>
 
